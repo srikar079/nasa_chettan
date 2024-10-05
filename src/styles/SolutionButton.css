@@ -1,0 +1,23 @@
+/* src/styles/SolutionButton.css */
+.solution-button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 50px; /* Space above the button */
+  }
+  
+  .solution-button {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background for contrast */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .solution-button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Change background on hover */
+  }
+  
