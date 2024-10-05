@@ -7,13 +7,20 @@ html, body {
   
   .homepage {
     text-align: center;
-    padding: 20px;
-    background-image: url('/public//img/home.jpg'); /* Ensure the correct file extension */
+    padding: 50px; /* Increased padding for better spacing */
+    background-image: url('/public/img/home.jpg'); /* Keep the space background image */
     background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
     height: 100vh; /* Full viewport height */
     color: white; /* Text color */
+  }
+  
+  .text-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for text */
+    padding: 20px; /* Padding for the text container */
+    border-radius: 10px; /* Rounded corners for the container */
+    display: inline-block; /* Center the container */
   }
   
   h1 {
@@ -22,15 +29,26 @@ html, body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow */
   }
   
+
   p {
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.9); /* Light white with some transparency */
-    margin: 10px 0; /* Add some margin for spacing */
+    color: #c8543c; /* Desired color for paragraph text */
+    margin: 10px 0;
   }
-  
   .link {
     color: #ff6347; /* Link color */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make it bold */
+    display: inline-block; /* Make the link a block for better spacing */
+    margin-top: 20px; /* Space above the link */
+    padding: 10px 20px; /* Add padding to the link for a button-like appearance */
+    border: 2px solid #ff6347; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, color 0.3s; /* Transition effect */
+  }
+  
+  .link:hover {
+    background: #ff6347; /* Change background on hover */
+    color: white; /* Change text color on hover */
   }
   

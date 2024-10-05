@@ -1,23 +1,30 @@
 /* src/styles/CharacterDialog.css */
+
 .character-dialog {
-    width: 40%;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .character-dialog.right {
-    background-color: #d0f0c0;
-  }
-  
-  .character-dialog.left {
-    background-color: #ffcccb;
-  }
-  
-  p {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-  }
-  
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 70%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.character-dialog.left {
+  justify-content: flex-start;
+}
+
+.character-dialog.right {
+  justify-content: flex-end;
+}
+
+.left-image, .right-image {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%; /* To make it circular */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.right-image {
+  margin-left: 10px; /* Space for right character */
+}

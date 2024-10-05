@@ -1,30 +1,75 @@
-/* src/styles/ConversationPage.css */
 .conversation-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .burning-earth {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px 0;
-  }
-  
-  .conversation-container {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-  }
-  
-  .nav-arrows {
-    margin-top: 20px;
-  }
-  
-  button {
-    font-size: 24px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
+  position: relative;
+  background-image: url('/public/img/earth2.webp'); /* Set your background image here */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Center vertically */
+} 
+.global-warning-heading {
+  position: absolute;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px; /* Font size for the heading */
+  color: #ff6347; /* Color of the heading */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make it bold */
+  z-index: 10; /* Ensure it's on top of other elements */
+}
+
+.burning-earth {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.character-dialog {
+  position: absolute;
+  max-width: 250px; /* Fixed width for the dialog box */
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  border-radius: 10px;
+  text-align: center;
+  white-space: pre-wrap; /* Maintain line breaks */
+}
+
+.left {
+  left: 10%; /* Near the left border */
+}
+
+.right {
+  right: 10%; /* Near the right border */
+}
+
+.character {
+  position: absolute;
+  width: 200px; /* Double the previous size */
+  height: auto;
+}
+
+.left .character {
+  left: 0; /* Align to the left border */
+  transform: translateX(-60%); /* Adjust to move further to the left */
+}
+
+.right .character {
+  right: 0; /* Align to the right border */
+  transform: translateX(60%); /* Adjust to move further to the right */
+}
+
+.nav-arrows {
+  position: absolute;
+  bottom: 20px; /* Keeps the arrows at the footer */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-arrows button {
+  font-size: 20px; /* Make the buttons larger */
+  margin: 0 10px;
+}
