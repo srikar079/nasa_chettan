@@ -1,0 +1,64 @@
+/* src/styles/CausesPage.css */
+
+.causes-page {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    background-image: url('/public/img/earth2.webp'); /* Adjust the path if necessary */
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    padding: 20px; /* Add some padding to the container */
+}
+
+.character {
+    width: 150px; /* Match the height from the dialogue page */
+    margin-right: 20px; /* Space between the girl and text box */
+    margin-left: 10px; /* Align her closer to the left border */
+    margin-top: 10%;
+    height: 250px; /* Lower the character */
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent box */
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px; /* Set width as needed */
+    margin-top:0; /* Space between the text box and the character */
+    margin-bottom: 110px;
+}
+
+.causes-container {
+    display: flex;
+    justify-content: space-between; /* Space out the cause divs horizontally */
+    width: 100%; /* Full width to occupy available space */
+    margin-left: 20px; /* Space to the left of the causes container */
+    margin-top: 50px; /* Move the causes container down */
+}
+
+.cause {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%; /* Width for each cause, adjust as necessary */
+    margin: 0 10px; /* Increase space between cause divs */
+}
+
+.gas-name {
+    color: #c8543c; /* Change the color of gas names to red */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+.gases {
+    display: flex;
+    flex-direction: column; /* Stack gases vertically */
+    justify-content: flex-start;
+    margin-top: 10px; /* Space between gases */
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    cursor: pointer;
+}

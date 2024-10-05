@@ -29,7 +29,7 @@
 }
 
 .character-dialog {
-  position: absolute;
+  position:absolute;
   max-width: 250px; /* Fixed width for the dialog box */
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
@@ -39,17 +39,17 @@
 }
 
 .left {
-  left: 10%; /* Near the left border */
+  left: 5%; /* Near the left border */
 }
 
 .right {
-  right: 10%; /* Near the right border */
+  right: 5%; /* Near the right border */
 }
 
 .character {
   position: absolute;
   width: 200px; /* Double the previous size */
-  height: auto;
+  height: 300px;
 }
 
 .left .character {

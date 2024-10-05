@@ -1,10 +1,11 @@
 // src/components/ConversationPage.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import CharacterDialog from './CharacterDilaog';
+import { Link, useNavigate } from 'react-router-dom'; // Import Link for navigation and useNavigate
+import CharacterDialog from './CharacterDilaog'; // Fixed spelling of CharacterDialog
 import '../styles/ConversationPage.css';
 
 const ConversationPage = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
   const [slide, setSlide] = useState(0);
 
   const conversations = [
@@ -15,21 +16,34 @@ const ConversationPage = () => {
     { question: "What are the reasons for this?", answer: "Primarily human activities like burning fossil fuels, deforestation, and industrial processes." },
   ];
 
-  const nextSlide = () => setSlide((prev) => (prev + 1) % conversations.length);
-  const prevSlide = () => setSlide((prev) => (prev - 1 + conversations.length) % conversations.length);
+  const nextSlide = () => {
+    if (slide === conversations.length - 1) {
+      // If last slide, navigate to Causes page
+      navigate('/causes'); 
+    } else {
+      // Move to the next slide
+      setSlide((prev) => prev + 1); 
+    }
+  };
+
+  const prevSlide = () => {
+    if (slide > 0) {
+      setSlide((prev) => prev - 1); // Allow moving to previous slides
+    }
+  };
 
   return (
     <div className="conversation-page">
-      <Link to="/" className="global-warning-heading">Global Warning!</Link> {/* Link to Home Page */}
-      <img src="/img/earth-burning.jpg" alt="Earth burning" className="burning-earth" />
-      <img src="/img/girl.jpg" alt="Girl" className="character left" />
-      <img src="/img/boy.png" alt="Boy" className="character right" />
-      <div className="conversation-container">
-        <CharacterDialog character="right" text={conversations[slide].answer} />
-        <CharacterDialog character="left" text={conversations[slide].question} />
-      </div>
+    <Link to="/" className="global-warning-heading">Global Warning!</Link> {/* Link to Home Page */}
+    <img src="/img/earth-burning.jpg" alt="Earth burning" className="burning-earth" />
+    <img src="/img/girl.jpg" alt="Girl" className="character left" />
+    <img src="/img/boy.png" alt="Boy" className="character right" />
+    <div className="conversation-container">
+      <CharacterDialog character="right" text={conversations[slide].answer} />
+      <CharacterDialog character="left" text={conversations[slide].question} />
+    </div>
       <div className="nav-arrows">
-        <button onClick={prevSlide}>←</button>
+        <button onClick={prevSlide} disabled={slide === 0}>←</button> {/* Disable if on first slide */}
         <button onClick={nextSlide}>→</button>
       </div>
     </div>
