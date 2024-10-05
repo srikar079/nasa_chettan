@@ -1,0 +1,21 @@
+/* src/styles/HomePage.css */
+.homepage {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #ff6347;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .earth-image {
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  

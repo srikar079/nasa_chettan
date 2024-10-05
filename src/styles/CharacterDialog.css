@@ -1,0 +1,23 @@
+/* src/styles/CharacterDialog.css */
+.character-dialog {
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-dialog.right {
+    background-color: #d0f0c0;
+  }
+  
+  .character-dialog.left {
+    background-color: #ffcccb;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
