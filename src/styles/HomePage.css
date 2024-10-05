@@ -1,21 +1,36 @@
 /* src/styles/HomePage.css */
-.homepage {
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .homepage {
     text-align: center;
     padding: 20px;
+    background-image: url('/public//img/home.jpg'); /* Ensure the correct file extension */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    height: 100vh; /* Full viewport height */
+    color: white; /* Text color */
   }
   
   h1 {
-    color: #ff6347;
+    font-size: 2.5rem; /* Change the font size */
+    color: #ff6347; /* Change to your preferred color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow */
   }
   
   p {
     font-size: 18px;
-    color: #333;
+    color: rgba(255, 255, 255, 0.9); /* Light white with some transparency */
+    margin: 10px 0; /* Add some margin for spacing */
   }
   
-  .earth-image {
-    width: 80%;
-    margin-top: 20px;
-    border-radius: 15px;
+  .link {
+    color: #ff6347; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make it bold */
   }
   

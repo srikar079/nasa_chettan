@@ -9,7 +9,6 @@ const HomePage = () => {
       <h1>Welcome to Global Warning!</h1>
       <p>Our mission is to spread awareness about global warming and its impact on our planet.</p>
       <p>We will help you understand how it's affecting different areas and provide solutions.</p>
-      <img src="/images/earth-space.jpg" alt="Earth from outer space" className="earth-image" />
       <Link to="/conversation">Go to Conversation</Link>
     </div>
   );
