@@ -1,0 +1,166 @@
+/* Solution Page Styles */
+
+.solution-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('/public/img/h4.jpg') no-repeat center center/cover; /* Hero image */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.solution-button {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.solution-button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Solution Sections */
+.solution-sections {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.solution-grid {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.solution-card {
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.solution-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.solution-card p {
+  font-size: 16px;
+  color: #e7e7e7;
+}
+
+/* Use background images for each solution card */
+.solution-card:nth-child(1) {
+  background: url('/public/img/solar.jpg') no-repeat center center/cover;
+}
+
+.solution-card:nth-child(2) {
+  background: url('/public/img/wind.jpg') no-repeat center center/cover;
+}
+
+.solution-card:nth-child(3) {
+  background: url('/public/img/hydro.jpg') no-repeat center center/cover;
+}
+
+/* Card Content Styling */
+.solution-card-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Visualization Section */
+.visualization-section {
+  padding: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.carbon-graph {
+  height: 300px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Call to Action */
+.cta-section {
+  background-color: #333;
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+/* Help Section */
+.help-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.help-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.help-list {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.help-list li {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.5; /* Spacing between list items */
+}
+.consequences-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.consequences-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.consequences-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.5; /* Spacing for better readability */
+}

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/CausesPage.css'; // Import your CausesPage styles
-import SolutionButton from './SolutionButton'; // Import the SolutionButton component
+import SolutionButton from './IncidentButton'; // Import the SolutionButton component
 
 const CausesPage = () => {
   return (
