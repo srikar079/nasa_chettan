@@ -11,6 +11,7 @@ const CausesPage = () => {
       <img src="/img/girl.jpg" alt="Girl" className="character" />
       <div className="text-box">
         Let's know about the causes.
+        And the solutions for the causes.
       </div>
       
       <div className="causes-container">
