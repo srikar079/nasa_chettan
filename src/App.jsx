@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import ConversationPage from './components/ConversationPage';
 import CausesPage from './components/CausesPage'; // Import the new page
 import SolutionPage from './components/SolutionPage';
+import NasaGibsMap from './components/NasaGibsMap';
 
 
 const App = () => {
@@ -15,8 +16,9 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/conversation" element={<ConversationPage />} />
           <Route path="/causes" element={<CausesPage />} /> {/* Causes Page */}
-          <Route path="/solution" element={<SolutionPage/>} /> {/* Solution route */}
-          </Routes>
+          <Route path="/solution" component={<SolutionPage />} />
+          <Route path="/nasa-gibs-map" element={<NasaGibsMap />} />
+        </Routes>
       </div>
     </Router>
   );
