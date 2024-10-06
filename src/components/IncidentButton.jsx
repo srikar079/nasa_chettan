@@ -11,3 +11,4 @@ const IncidentsButton = ({ text }) => {
 };
 
 export default IncidentsButton;
+

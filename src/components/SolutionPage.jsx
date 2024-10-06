@@ -1,7 +1,6 @@
 import React,{Link} from 'react';
-import '../styles/Solution.css'; // Assuming you're using a separate CSS file for styling
-import IncidentsButton from './IncidentButton';
-
+import '../styles/Solution.css'; // Assuming you're using a separate CSS file for stylingimpo
+import IncidentsButton from './IncidentButton'
 const SolutionPage = () => {
   return (
     <div className="solution-page">

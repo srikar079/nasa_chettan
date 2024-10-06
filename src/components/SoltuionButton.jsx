@@ -1,12 +1,15 @@
+// src/components/SolutionButton.jsx
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import '../styles/SolutionButton.css'; // Assuming you're using a separate CSS file for styling
+import { Link } from 'react-router-dom';
+import '../styles/SolutionButton.css'; // Import the CSS file for styling
 
-const SolutionButton = ({ text, link }) => {
+const SolutionButton = () => {
   return (
-    <Link to={link} className="solution-button">
-      {text}
-    </Link>
+    <div className="solution-button-container">
+      <Link to="/solution" className="solution-button">
+        Solution
+      </Link>
+    </div>
   );
 };
 

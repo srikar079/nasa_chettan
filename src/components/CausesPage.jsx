@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/CausesPage.css'; // Import your CausesPage styles
-import SolutionButton from './IncidentButton'; // Import the SolutionButton component
+import SolutionButton from './SoltuionButton'; // Import the SolutionButton component
 
 const CausesPage = () => {
   return (
@@ -46,7 +46,7 @@ const CausesPage = () => {
           </div>
         </div>
       </div>
-      <SolutionButton />
+      <SolutionButton/>
     </div>
   );
 };
