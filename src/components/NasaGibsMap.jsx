@@ -1,6 +1,7 @@
 // src/NasaGibsMap.js
 import React, { useEffect, useRef, useState } from "react";
 import { useLoadScript } from "@react-google-maps/api";
+import './NasaGibsMap.css'; // Import the external CSS for styling
 
 const NASA_GIBS_URL =
   "//gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_Aerosol/default/2013-12-02/GoogleMapsCompatible_Level6/";
@@ -26,6 +27,7 @@ const NasaGibsMap = () => {
         center: { lat: 21, lng: 78 },
         zoom: 5,
         maxZoom: 6,
+        styles: [/* Optional: Custom Google Maps styles for a clean look */],
       };
 
       // Create the map instance once the script is loaded
@@ -81,9 +83,9 @@ const NasaGibsMap = () => {
   // Render content for InfoWindow with editable input
   const renderInfoWindowContent = (marker) => {
     return `
-      <div>
-        <input id="customText" type="text" value="${marker.text}" />
-        <button id="saveButton">Save</button>
+      <div class="info-window">
+        <input id="customText" class="info-input" type="text" value="${marker.text}" />
+        <button id="saveButton" class="info-btn">Save</button>
       </div>
       <script>
         document.getElementById('saveButton').onclick = function() {
@@ -138,9 +140,43 @@ const NasaGibsMap = () => {
   }
 
   return (
-    <div>
-      <h1>NASA GIBS Map with Google Maps API</h1>
-      <div ref={mapRef} style={{ height: "500px", width: "100%" }}></div>
+    <div className="container">
+      <h1 className="main-title">NASA GIBS Map with Aerosol Optical Depth</h1>
+      <div ref={mapRef} className="map-container"></div>
+
+      {/* Image Gallery Section */}
+      <div className="gallery-container">
+        <h2>Image Gallery</h2>
+        <div className="image-gallery">
+          <div className="image-item">
+            <img src="img/amazon.jpeg" alt="Image 1 Description" />
+            <p><strong>Image 1:</strong> Incident: In 2019, the Amazon rainforest experienced a record number of wildfires, partly due to deforestation and land-clearing practices, exacerbated by a changing climate. These fires emitted large amounts of CO into the atmosphere.
+Consequences: CO emissions from the fires reached as far as neighboring countries like Brazil and Peru. Health problems related to smoke inhalation and CO exposure were reported, particularly in rural areas with limited healthcare infrastructure. The fires also released vast quantities of CO₂ and contributed to global climate change.
+Cause: The combination of climate change-induced dry conditions and human activities led to increased fire activity and higher CO emissions in the Amazon.</p>
+          </div>
+          <div className="image-item">
+            <img src="img/lake.jpg" alt="Image 2 Description" />
+            <p><strong>Image 2:</strong> Incident: One of the most well-known cases of CO2 contamination occurred at Lake Nyos, a volcanic crater lake in Cameroon. On August 21, 1986, a limnic eruption released a massive amount of CO2, estimated at over 1.6 million tons, from the lake into the atmosphere.
+Consequences: The CO2 cloud, being denser than air, displaced oxygen in the surrounding valleys and suffocated approximately 1,700 people and thousands of livestock within a 25 km radius. The cloud traveled silently, killing people and animals in their sleep.
+Cause: CO2 accumulated in the bottom of the lake from volcanic activity and was suddenly released, probably due to a landslide or seismic activity.</p>
+          </div>
+          <div className="image-item">
+            <img src="img/methane.jpg" alt="Image 3 Description" />
+            <p><strong>Image 3:</strong> Methane Leaks from Natural Gas Infrastructure:
+
+Various incidents have been reported worldwide, where aging pipelines and infrastructure have leaked methane into the atmosphere. For example, the 2015 Aliso Canyon gas leak in California released around 97,000 metric tons of methane over several months, significantly impacting air quality and contributing to climate change.</p>
+          </div>
+          <div className="image-item">
+            <img src="/img/farming.jpeg" alt="Image 4 Description" />
+            <p><strong>Image 4:</strong> N₂O from Industrial Processes:
+
+Certain industrial processes, such as the production of nitric acid and nylon, emit significant amounts of nitrous oxide. For example, emissions from the production of nitric acid have contributed to global N₂O levels, leading to regulatory measures in various countries to mitigate these emissions.
+N₂O from Industrial Processes:
+
+Certain industrial processes, such as the production of nitric acid and nylon, emit significant amounts of nitrous oxide. For example, emissions from the production of nitric acid have contributed to global N₂O levels, leading to regulatory measures in various countries to mitigate these emissions.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
